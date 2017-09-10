@@ -11,8 +11,8 @@ public class DMN {
   }
 
   private void deleteMiddleNode(Node n) {
-    if (n == null) return;
-    if (n.next != null && n.next.next == null) {
+    if (n == null || n.next == null) return;
+    if (n.next.next == null) {
       System.out.println(n.next);
       return;
     }
