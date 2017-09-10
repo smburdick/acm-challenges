@@ -2,9 +2,30 @@ public class DMN {
   public static void main(String[] args) {
     new DMN();
   }
+
   public DMN() {
     testCase1();
     testCase2();
+    testCase3();
+    testCase4();
+  }
+
+  private void deleteMiddleNode(Node n) {
+    if (n == null) return;
+    if (n.next != null && n.next.next == null) {
+      System.out.println(n.next);
+      return;
+    }
+    Node runner = n.next;
+    Node prev = n;
+    Node start = n;
+    while (runner != null && runner.next != null) {
+      prev = n;
+      n = n.next;
+      runner = runner.next.next;
+    }
+    prev.next = n.next;
+    System.out.println(start);
   }
 
   private void testCase2() {
@@ -28,18 +49,16 @@ public class DMN {
     deleteMiddleNode(n1);
   }
 
-  private void deleteMiddleNode(Node n) {
-    if (n == null) return;
-    Node runner = n.next;
-    Node prev = n;
-    Node start = n;
-    while (runner != null && runner.next != null) {
-      prev = n;
-      n = n.next;
-      runner = runner.next.next;
-    }
-    prev.next = n.next;
-    System.out.println(start);
+  private void testCase3() {
+    deleteMiddleNode(new Node(0));
   }
+
+  private void testCase4() {
+    Node n = new Node(0);
+    n.next = new Node(1);
+    deleteMiddleNode(n);
+  }
+
+
 
 }
