@@ -8,4 +8,4 @@ You can verify your solution (if you used Java) for `n = 1000` like so:<br>
 $ javac MySolution.java
 $ java MySolution 1000 | diff - primes-leq-1000.txt
 ```
-__Note:__ in this text file, each number is separated by a space, with one space and a newline after the final number)
+__Note:__ in this text file, each number is separated by a space, with one space and a newline after the final number
