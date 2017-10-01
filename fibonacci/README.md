@@ -1,6 +1,6 @@
 # Fibonacci Numbers
 The [Fibonacci sequence](https://oeis.org/A000045) may be defined as follows:<br>
-``` F(n) = F(n-1) + F(n-2) ```<br>
+``` F(n) = F(n-1) + F(n-2), integer n > 1, ```<br>
 ``` F(0) = 0, F(1) = 1 ```
 ## Challenge 1
 Write a program that computes the `n`th Fibonacci number, where `n` is a nonnegative integer.
